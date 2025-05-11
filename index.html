@@ -44,7 +44,100 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main class="container mt-5">
+      <form class="w-75 mx-auto border border-1 border-primary rounded-3 p-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="inputNombre" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control border border-1 border-primary-subtle"
+                id="inputNombre"
+                placeholder="Ej: Luciana"
+                minlength="2"
+                maxlength="25"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="inputApellido" class="form-label">Apellido</label>
+              <input
+                type="text"
+                class="form-control border border-1 border-primary-subtle"
+                id="inputApellido"
+                placeholder="Ej: Ruiz"
+                minlength="2"
+                maxlength="25"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="inputEdad" class="form-label">Edad</label>
+              <input
+                type="number"
+                class="form-control border border-1 border-primary-subtle"
+                id="inputEdad"
+                placeholder="Ej: 21"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="inputDNI" class="form-label">DNI</label>
+              <input
+                type="number"
+                class="form-control border border-1 border-primary-subtle"
+                id="inputDNI"
+                placeholder="Ej: 45196868"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="inputSexo" class="form-label">Sexo</label>
+              <select
+                name="inputSexo"
+                id="inputSexo"
+                class="form-select border border-1 border-primary-subtle"
+              >
+                <option value="0">Seleccione una opción</option>
+                <option value="1">Hombre</option>
+                <option value="2">Mujer</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="inputPeso" class="form-label">Peso</label>
+              <input
+                type="number"
+                class="form-control border border-1 border-primary-subtle"
+                id="inputPeso"
+                placeholder="Ej: 65 kg"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="inputAltura" class="form-label">Altura</label>
+              <input
+                type="number"
+                class="form-control border border-1 border-primary-subtle"
+                id="inputAltura"
+                placeholder="Ej: 167 cm"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="inputAnioNacimiento" class="form-label"
+                >Año de Nacimiento</label
+              >
+              <input
+                type="number"
+                class="form-control border border-1 border-primary-subtle"
+                id="inputAnioNacimiento"
+                placeholder="Ej: 2004"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="text-end mt-2">
+            <button type="submit" class="btn btn-primary text-end">Crear persona</button>
+        </div>
+      </form>
+    </main>
     <footer class="bg-dark-subtle text-center">
       <p class="py-4">&copy Todos los derechos reservados.</p>
     </footer>
