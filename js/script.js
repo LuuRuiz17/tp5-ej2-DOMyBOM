@@ -1,7 +1,7 @@
 function createPerson(e) { 
     e.preventDefault();
     contenedorRespuestaBotones.innerHTML = "";
-    
+
     const name = document.getElementById("inputNombre");
     const surname = document.getElementById("inputApellido")
     const dni = document.getElementById("inputDNI");
@@ -79,7 +79,12 @@ class Person {
     }
 
     get gender() {
-        return this.#gender;
+        if(this.#gender === 1){
+            return "Hombre";
+        }
+        else{
+            return "Mujer";
+        }
     }
 
     set gender(newGender) {
@@ -130,7 +135,7 @@ class Person {
 
     showPerson() {
         const container = document.createElement("div");
-
+        //En género no tengo que usar la propiedad privada porque esa sólo tiene un número. En el getter hice un condicional para que lo transforme en "Hombre" o "Mujer"
         container.innerHTML = `
 
         <h3>Datos de la persona creada:</h3>
@@ -139,9 +144,9 @@ class Person {
         <li><b>Apellido:</b> ${this.#surname}</li>
         <li><b>DNI:</b> ${this.#dni}</li>
         <li><b>Edad:</b> ${this.#age}</li>
-        <li><b>Género:</b> ${this.#gender}</li>
-        <li><b>Peso:</b> ${this.#weight}</li>
-        <li><b>Altura:</b> ${this.#height}</li>
+        <li><b>Género:</b> ${this.gender}</li> 
+        <li><b>Peso:</b> ${this.#weight} kg</li>
+        <li><b>Altura:</b> ${this.#height} cm</li>
         <li><b>Año de Nacimiento:</b> ${this.#year}</li>
         </ul>`;
 
